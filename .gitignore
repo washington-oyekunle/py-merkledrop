@@ -10,5 +10,9 @@ venv/
 dist/
 build/
 .pytest_cache/
+.mypy_cache/
 proofs.json
 merkle_root.txt
+out/
+*.json
+!package.json

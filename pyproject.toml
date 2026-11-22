@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-merkledrop"
+version = "0.2.0"
+description = "Pure Python Merkle tree airdrop toolkit with Ethereum Keccak-256 support"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Washington Oyekunle" }]
+requires-python = ">=3.10"
+keywords = ["merkle", "airdrop", "blockchain", "ethereum", "keccak", "crypto"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+merkledrop = "cli:main"
+
+[project.urls]
+Homepage = "https://github.com/washington-oyekunle/py-merkledrop"
+Repository = "https://github.com/washington-oyekunle/py-merkledrop"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["merkledrop*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

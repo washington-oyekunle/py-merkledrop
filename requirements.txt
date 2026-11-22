@@ -1,2 +1,3 @@
-# Optional: pytest for running tests
+# Runtime: zero dependencies
+# Dev:
 pytest>=7.0
